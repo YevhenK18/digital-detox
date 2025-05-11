@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Detox</title>
+  <link href="styles.css" rel="stylesheet">
+  <script>
+    console.log('Checking styles.css:', document.styleSheets.length > 0 ? 'Loaded' : 'Not loaded');
+  </script>
+</head>
+<body>
+  <h1>Digital Detox</h1>
+
+
+  <div class="card">
+    <label>Track Website</label>
+    <div class="flex">
+      <input type="text" id="websiteInput" placeholder="e.g., youtube.com">
+      <button id="addWebsite" class="add-btn">Add</button>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>Current Site</h2>
+    <p id="currentSite">No active site</p>
+    <p id="timeSpent">0s</p>
+    <p id="timeRemaining">No limit</p>
+    <button id="addCurrentSite" class="add-btn" style="margin-top: 8px; padding: 4px 12px; font-size: 12px;">Add to Track</button>
+  </div>
+
+
+  <div class="card">
+    <button id="pauseButton" class="pause-btn">Pause for 5 min</button>
+  </div>
+
+
+  <div class="card">
+    <h2>Tracked Websites</h2>
+    <ul id="websiteList"></ul>
+  </div>
+
+
+  <div class="card">
+    <h2>Time Spent Today</h2>
+    <div id="stats" class="stats-grid"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
